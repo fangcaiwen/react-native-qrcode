@@ -25,8 +25,10 @@
 
 然后添加
 
-```<uses-permission android:name="android.permission.CAMERA"/>```
-```<uses-permission android:name="android.permission.FLASHLIGHT" />```
+```
+<uses-permission android:name="android.permission.CAMERA"/>
+<uses-permission android:name="android.permission.FLASHLIGHT" />
+```
 
 4.检查配置：
 
