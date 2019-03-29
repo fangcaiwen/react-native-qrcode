@@ -65,3 +65,32 @@ include ':app'
       );
     }
 ```
+> 配置完毕，以下是用法
+
+1.导入
+```
+import { QrImageView,QrcodeModule }from 'react-native-qrcode';
+
+```
+
+2.启用扫描
+```
+ QrcodeModule.startScan((text) => {
+            alert("扫描结果："+text);
+        });
+```
+
+3.生成二维码
+
+
+```
+let srcString = "我是大帅哥";
+...
+<QrImageView
+     style={{width:300,height:300}}
+     size={350}
+     imageSrc={srcString}
+  /> 
+```
+size是生成二维码的尺寸，
+imageSrc为要生成的字符
