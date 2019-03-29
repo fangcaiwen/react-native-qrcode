@@ -33,7 +33,8 @@
 检查app下的build.gradle 
 
 ```
-    dependencies {
+dependencies {
+   // add line
     compile project(':react-native-qrcode')
     ...
 }
@@ -43,8 +44,9 @@
 
 ```
 rootProject.name = 'xxxx'
-include ':react-native-qrcode'
-project(':react-native-qrcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-qrcode/android')
+// add line
+    include ':react-native-qrcode'
+    project(':react-native-qrcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-qrcode/android')
 ...
 include ':app'
 
@@ -55,6 +57,7 @@ include ':app'
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          // add line
           new QrcodePackage(),
           ...  
       );
