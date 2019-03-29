@@ -25,6 +25,38 @@
 
 然后添加
 
-``` <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.FLASHLIGHT" /> ```
+```<uses-permission android:name="android.permission.CAMERA"/>```
+```<uses-permission android:name="android.permission.FLASHLIGHT" />```
 
+4.检查配置：
+
+检查app下的build.gradle 
+
+```
+    dependencies {
+    compile project(':react-native-qrcode')
+    ...
+}
+```
+
+检查settings.gradle
+
+```
+rootProject.name = 'xxxx'
+include ':react-native-qrcode'
+project(':react-native-qrcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-qrcode/android')
+...
+include ':app'
+
+```
+检查MainApplication
+```
+ @Override
+    protected List<ReactPackage> getPackages() {
+      return Arrays.<ReactPackage>asList(
+          new MainReactPackage(),
+          new QrcodePackage(),
+          ...  
+      );
+    }
+```
