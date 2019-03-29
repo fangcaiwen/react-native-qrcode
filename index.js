@@ -1,5 +1,6 @@
 // 既有调用扫描二维码api方法，又有生成二维码的Ui
-import { NativeModules,requireNativeComponent } from 'react-native';
+import React, { Component } from 'react';
+import { NativeModules,requireNativeComponent,View } from 'react-native';
 import PropTypes from 'prop-types';
 
 
@@ -25,6 +26,7 @@ class QrImageView extends Component {
     }
 }
 
-QrcodeModule.QrImageView = QrImageView;
-
-export default  QrcodeModule;
+export {
+    QrImageView,
+    QrcodeModule
+};
