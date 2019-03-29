@@ -4,7 +4,7 @@
   "description": "React Native Android QrCode",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.iotbull.com:2222/react_native/react-native-qrcode.git"
+    "url": "git+ssh://git@github.com:fangcaiwen/react-native-qrcode.git"
   },
   "main": "index.js",
   "scripts": {
